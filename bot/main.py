@@ -3,9 +3,8 @@ from discord.ext import commands
 import os
 import sys
 from dotenv import load_dotenv
-from backend.config import DISCORD_TOKEN #brings in the discord token from the config file
-
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) #this adds the parent directory to the path so that the bot can access the backend folder
+from backend.config import DISCORD_TOKEN #brings in the discord token from the config file
 
 intents = discord.Intents.default() #this sets the intents, what the bot recieves from discord, to the default values
 intents.message_content = True
